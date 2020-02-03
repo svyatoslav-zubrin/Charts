@@ -457,7 +457,7 @@ open class PieChartRenderer: DataRenderer
                         context.setLineWidth(dataSet.valueLineWidth)
 
                         if let labelLength = pe?.label?.count, labelLength <= 0 {
-                            context.setStrokeColor(CGColor.clear)
+                            context.setStrokeColor(NSUIColor.clear.cgColor)
                             context.setLineWidth(0)
                         }
 
