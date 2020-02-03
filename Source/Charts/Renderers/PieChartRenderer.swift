@@ -456,6 +456,11 @@ open class PieChartRenderer: DataRenderer
                         }
                         context.setLineWidth(dataSet.valueLineWidth)
 
+                        if let labelLength = pe?.label?.count, labelLength <= 0 {
+                            context.setStrokeColor(CGColor.clear)
+                            context.setLineWidth(0)
+                        }
+
                         context.move(to: CGPoint(x: pt0.x, y: pt0.y))
                         context.addLine(to: CGPoint(x: pt1.x, y: pt1.y))
                         context.addLine(to: CGPoint(x: pt2.x, y: pt2.y))
